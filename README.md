@@ -14,7 +14,7 @@ AI 에이전트와 일하면서 만든 스킬, 에이전트, 그 밖의 도구�
 
 ## 스킬
 
-### [interview](skills/interview)
+### [taesan-interview](skills/taesan-interview)
 
 막연한 아이디어나 작업 요청을 인터뷰로 파고들어, AI 에이전트가 추가 질문 없이 실행할 수 있는 스펙 파일로 만듭니다.
 
@@ -28,10 +28,10 @@ AI 에이전트와 일하면서 만든 스킬, 에이전트, 그 밖의 도구�
 
 ```bash
 git clone https://github.com/HSUNEH/taesan.git
-cp -r taesan/skills/interview ~/.claude/skills/
+cp -r taesan/skills/taesan-interview ~/.claude/skills/
 ```
 
-Claude Code에서 `/interview` 또는 "나랑 인터뷰하면서 구체화하자"처럼 요청하면 실행됩니다.
+Claude Code에서 `/taesan-interview` 또는 "나랑 인터뷰하면서 구체화하자"처럼 요청하면 실행됩니다.
 
 참고한 것:
 
