@@ -115,6 +115,72 @@ Claude Code에서 `/taesan-interview`를 입력하거나 "나랑 인터뷰하면
 
 </details>
 
+### ✍️ [taesan-writing](skills/taesan-writing)
+
+**논리가 서 있고 AI가 쓴 티가 나지 않는** 한국어 글을 씁니다. 주장하는 글, 업무 문서, 기술 문서, 영상 대본을 다룹니다.
+
+AI 티의 대부분은 할 말이 없는 자리를 형식으로 메울 때 생깁니다. 그래서 표현을 고치기 전에 논리부터 채웁니다.
+
+```mermaid
+flowchart LR
+    A[재료 확인] --> B[뼈대 확인]
+    B --> C[본문]
+    C --> D[퇴고]
+    D --> E[독자 검증]
+    E --> F[전달]
+```
+
+**쓰기 전에 보여주는 뼈대**
+
+```
+결론: 인터뷰 도구는 남은 분량이 보여야 끝까지 쓰인다
+범위: 질문이 열 개를 넘는 인터뷰에 한해
+├─ 근거 1: 끝을 모르면 중간에 그만둔다
+│   ├─ 증거: 근거 필요
+│   └─ 연결: 그만두는 이유가 내용이 아니라 분량 때문이어야 한다
+├─ 근거 2: ...
+└─ 반론: 트리를 먼저 그리면 인터뷰가 틀에 갇힌다
+    └─ 답: 새 가지는 알리고 추가한다
+```
+
+| 장치 | 하는 일 |
+|---|---|
+| 뼈대 먼저 | 결론 한 문장, 근거, 증거, 반론을 쓰기 전에 확인받습니다. 증거와 근거 사이에 숨은 전제를 한 줄로 적어 구멍을 찾습니다 |
+| 지어내지 않음 | 수치와 사례가 없으면 `근거 필요`로 표시하고 묻습니다. 주장의 세기와 확정된 정도를 바꾸지 않습니다 |
+| AI 티 점검 | 내용 없는 문장, 빈자리를 메우는 문구, 틀에 박힌 수사, 번역투, 유보 겹치기, 리듬, 서식. 한 번만 나와도 고칠 것과 몰려 있을 때만 고칠 것을 나눕니다 |
+| 설득 | 근거가 약한 기법과 조작에 해당하는 기법은 쓰지 않습니다. 대조나 셋으로 묶기처럼 수사법이 AI 티와 겹칠 때의 기준을 둡니다 |
+| 독자 검증 | 초안도 뼈대도 보지 못한 에이전트가 글을 읽고, 무슨 말로 읽혔는지와 어디서 막혔는지 보고합니다 |
+
+**설치**
+
+```bash
+git clone https://github.com/HSUNEH/taesan.git
+cp -r taesan/skills/taesan-writing ~/.claude/skills/
+```
+
+Claude Code에서 `/taesan-writing`을 입력하거나 "이 주제로 글 써줘", "이 글 다듬어줘"처럼 요청하면 실행됩니다.
+
+<details>
+<summary><b>참고한 것</b></summary>
+
+<br>
+
+| 출처 | 가져온 것 |
+|---|---|
+| [toss/technical-writing](https://github.com/toss/technical-writing) | 문서 유형, 정보 구조, 문장 다듬기의 원칙 |
+| [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) | 한국어 AI 티 패턴 분류, 고치다가 새 패턴을 심지 않는 가드 |
+| [blader/humanizer](https://github.com/blader/humanizer) | 신호의 세기 구분, 정당한 용법의 예외 |
+| [byungjunjang/slop-rewrite](https://github.com/byungjunjang/slop-rewrite) | 새 사실 금지와 확정 수준 보존, 접속사 삭제 시험, 제목에 판단 담기 |
+| [nerdkim/korean-rewrite](https://github.com/nerdkim/korean-rewrite) | 영어 역번역 시험, 빠진 중간 단계 검사 |
+| [anthropics/skills](https://github.com/anthropics/skills) | 독자 질문을 미리 적어 두고 대조하는 검증 |
+| [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | 믿을 수 없는 지표, 사람 글의 표지 |
+| Minto, Toulmin | 피라미드 구조, 숨은 전제 드러내기 |
+| O'Keefe & Hoeken (2021) | 설득 기법의 효과 크기 종합 |
+
+원칙만 참고해 새로 썼고, 원문의 문장과 예시는 옮기지 않았습니다.
+
+</details>
+
 ---
 
 <p align="center"><sub>오르고 또 오르면 못 오를 리 없건마는</sub></p>
