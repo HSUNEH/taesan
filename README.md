@@ -60,7 +60,7 @@ cp -r taesan/skills/* ~/.claude/skills/
 인터뷰하는 동안 아래와 같은 트리가 남은 분량을 보여줍니다. ✅는 정해진 항목, 🔶는 일부만 정해진 항목, ⬜는 남은 항목입니다. 도중에 새 항목이 생기면 이유와 함께 알리고 전체 개수를 고칩니다.
 
 ```
-이슈 트리  [4/7 해소]
+질문 트리  [4/7 해소]
 ├─ ✅ 문제
 ├─ ✅ 성공 기준
 ├─ 🔶 범위
@@ -136,7 +136,7 @@ AI가 쓴 티는 대부분 할 말이 없는 자리를 "시사하는 바가 크�
 | [mattpocock/skills](https://github.com/mattpocock/skills) | 앞선 결정이 끝난 질문만 묶어 묻기 |
 | [garrytan/gstack](https://github.com/garrytan/gstack) | 전제를 명제로 내놓고 동의 여부 확인, 맞장구 대신 입장 밝히기 |
 | [github/spec-kit](https://github.com/github/spec-kit) | 질문마다 왜 묻는지 밝히기 |
-| 맥킨지식 문제 해결 | 문제 정의, 이슈 트리, 답을 먼저 추측하고 검증하는 접근 |
+| 맥킨지식 문제 해결 | 문제 정의, 이슈 트리(이 스킬의 질문 트리), 답을 먼저 추측하고 검증하는 접근 |
 
 </details>
 
