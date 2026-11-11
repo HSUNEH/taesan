@@ -75,7 +75,7 @@ cp -r taesan/skills/* ~/.claude/skills/
 - 스펙의 결정마다 출처를 적습니다. 사용자가 확정한 것, 인터뷰어가 제안한 것, 조사로 확인한 것을 구분합니다.
 - 중간에 그만하자고 하면 남은 항목은 추천안을 "가정"으로 적고 마무리합니다.
 - 스펙은 Claude Code를 실행한 폴더의 `specs/YYYY-MM-DD-<주제>.md`에 저장합니다.
-- 6단계 감사에서 서브에이전트(별도로 띄우는 보조 에이전트)를 하나 씁니다. 여러 사람이 얽힌 일이면 5단계에서 사람마다 하나씩 더 띄워 그 사람 입장에서 문제를 찾게 할 수 있는데, 이것은 물어보고 동의할 때만 합니다. 서브에이전트를 쓰는 만큼 시간과 토큰이 더 듭니다.
+- 6단계 감사에서 서브에이전트(별도로 띄우는 보조 에이전트)를 하나 씁니다. 여러 사람이 얽힌 일이면 5단계에서 사람마다 하나씩 더 띄워 그 사람 입장에서 문제를 찾게 할 수 있는데, 이것은 물어보고 동의할 때만 합니다. 서브에이전트를 쓰는 만큼 시간과 토큰이 더 듭니다. 서브에이전트를 쓸 수 없는 환경에서는 감사를 건너뛰었다고 알리고 스펙에도 적습니다.
 
 ### 반복 업무는 스킬로
 
@@ -126,7 +126,7 @@ AI가 쓴 티는 대부분 할 말이 없는 자리를 "시사하는 바가 크�
 
 - 글의 종류에 따라 구조와 문체를 달리합니다. 종류별 안내는 [`references/types.md`](skills/taesan-writing/references/types.md)에 있습니다.
 - 독자를 설득하는 기법은 가려서 씁니다. 가짜 긴급함, 지어낸 사례, 근거 없는 "전문가들은"은 쓰지 않습니다. 기준은 [`references/persuasion.md`](skills/taesan-writing/references/persuasion.md)에 있습니다.
-- 5단계에서 서브에이전트를 하나 쓰므로 시간과 토큰이 더 듭니다.
+- 5단계에서 서브에이전트를 하나 쓰므로 시간과 토큰이 더 듭니다. 서브에이전트를 쓸 수 없는 환경에서는 검증하지 못했다고 알립니다.
 
 ## 이름
 
@@ -154,6 +154,7 @@ AI가 쓴 티는 대부분 할 말이 없는 자리를 "시사하는 바가 크�
 | [garrytan/gstack](https://github.com/garrytan/gstack) | 전제를 명제로 내놓고 동의 여부 확인, 맞장구 대신 입장 밝히기 |
 | [github/spec-kit](https://github.com/github/spec-kit) | 질문마다 왜 묻는지 밝히기 |
 | [NousResearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 작업별 선호와 수정은 메모리가 아니라 스킬에 남기기, 실행 중 발견한 빠진 단계와 함정을 끝내기 전에 스킬에 반영하기, 기록이 아니라 교훈으로 쓰기 |
+| [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) | 검토자가 문서를 자기 말로 먼저 풀어 쓰기, 지적을 따르지 않을 때 문서 안의 근거 대기, 서브에이전트를 못 띄우면 검토했다고 치지 않기, 실패한 검토를 "문제 없음"으로 세지 않기 |
 | 맥킨지식 문제 해결 | 문제 정의, 이슈 트리(이 스킬의 질문 트리), 답을 먼저 추측하고 검증하는 접근 |
 
 </details>
@@ -172,6 +173,7 @@ AI가 쓴 티는 대부분 할 말이 없는 자리를 "시사하는 바가 크�
 | [nerdkim/korean-rewrite](https://github.com/nerdkim/korean-rewrite) | 영어로 되옮겨 번역투 가려내기, 건너뛴 중간 단계 찾기 |
 | [anthropics/skills](https://github.com/anthropics/skills) | 독자가 답할 수 있어야 하는 질문을 미리 적어 두고 대조하기 |
 | [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) | AI 글의 근거로 삼으면 안 되는 지표, 사람 글에 흔한 특징 |
+| [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) | 지적을 따르지 않을 때 글 안의 근거 대기, 서브에이전트를 못 띄우면 검증했다고 치지 않기 |
 | Barbara Minto, 피라미드 원칙 | 결론을 위에 두고 근거로 받치는 구조 |
 | Stephen Toulmin, 논증 모델 | 증거와 주장 사이의 숨은 전제 드러내기 |
 | O'Keefe & Hoeken (2021) | 설득 기법들의 실제 효과를 종합한 연구 |
